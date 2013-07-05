@@ -1,5 +1,5 @@
 # Django settings for home project.
-
+import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -107,7 +107,8 @@ ROOT_URLCONF = 'home.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'home.wsgi.application'
 
-TEMPLATE_DIRS = ('C:/Users/Pro/home/django_templates',
+TEMPLATE_DIRS = (os.path.join(os.getcwd(), 'django_templates'),
+    'C:/Users/Pro/home/django_templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
